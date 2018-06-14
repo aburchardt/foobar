@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>FooBar - Presented by Code Bros</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Passion+One|Shadows+Into+Light|Orbitron" rel="stylesheet">
+</head>
+
+<body>
+    <div id="scene">
+        <div id="sign">
+            <p class="bar_name"></p>
+            <p class="bar_bros">by Code bros</p>
+        </div>
+        <div class="barClosing">
+            <p class="closingTime">CLOSING IN xx:xx:xx</p>
+        </div>
+        <div id="counter"></div>
+        <div id="bartenders">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div id="tv">
+            <div id="screen">
+                <div id="screen1">
+                    <p class="in_queue"></p>
+                    <div class="being_served"></div>
+                </div>
+                <div id="screen2">
+                    <h2>Our most popular beers:</h2>
+                    <div class="podium"></div>
+                    <div class="first_place"></div>
+                    <div class="second_place"></div>
+                    <div class="third_place"></div>
+                </div>
+            </div>
+        </div>
+        <div id="taps"></div>
+    </div>
+    <div id="kegs_left">
+        <h2>Amount of kegs in storage</h2>
+    </div>
+    <div id="taps_storage">
+    </div>
+    <div id="modal_window">
+        <div id="beer_info" onclick="event.stopPropagation();">
+            <div id="close">
+                <div id="close_button">X</div>
+            </div>
+            <div id="beer_label"></div>
+            <div id="beer_name">
+                <h2></h2>
+            </div>
+            <div id="beer_alc"></div>
+            <div id="beer_cat"></div>
+            <div id="description">
+                <b onclick="moreInfo(this)">Description</b>
+            </div>
+            <div id="beer_desc">
+                <div id="beer_appear"></div>
+                <div id="beer_aroma"></div>
+                <div id="beer_flavor"></div>
+                <div id="beer_mouth"></div>
+                <div id="beer_overall"></div>
+            </div>
+        </div>
+    </div>
+    <script src="http://petlatkea.dk/2018/front/foobar.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,585 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    cursor: default;
+}
+
+/* -------- SCENE -------- */
+
+#scene {
+    position: relative;
+    background-image: url(images/scene/bar_wall.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 41.5vw;
+    overflow: hidden;
+}
+
+/* --------- BAR SIGN -------- */
+
+#sign {
+    position: absolute;
+    background-image: url(images/scene/bar_sign.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 20%;
+    width: 15%;
+    top: -5%;
+    left: 5%;
+    transform: rotateX(90deg);
+    animation: 2s ease forwards;
+    /* animation-name: moveSign; */
+    transform-origin: top;
+    transform-style: preserve-3d;
+}
+
+.bar_name {
+    font-family: 'Passion One', cursive;
+    position: absolute;
+    font-size: 2vw;
+    top: 24%;
+    left: 24%;
+}
+
+.bar_bros {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 1.2vw;
+    position: absolute;
+    top: 15%;
+    top: 52%;
+    left: 40%;
+}
+
+@keyframes moveSign {
+    0% {
+        transform: rotateX(-90deg);
+    }
+
+    50% {
+        transform: rotateX(45deg)
+     }
+
+    800% {
+        transform: rotateX(-35deg)
+    }
+
+    95% {
+        transform: rotateX(10deg);
+    }
+
+    100% {
+        transform: rotateX(0deg);
+    }
+}
+/* ------------ BAR SIGN SLUT ---------- */
+
+/* ------------- CLOCK ---------- */
+.barClosing {
+    position: absolute;
+    background-image: url(images/scene/closing_time.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    right: 3%;
+    top: 3%;
+    height: 10%;
+    width: 19%;
+    
+}
+
+.closingTime {
+    position: absolute;
+    font-family: 'Orbitron', sans-serif;
+    color: red;
+    font-size: 1.4vw;
+    left: 5%;
+    top: 3%;
+}
+/* ------------- CLOCK SLUT ---------- */
+
+/* --------- COUNTER --------- */
+#counter {
+    position: absolute;
+    background-image: url(images/scene/bar.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 41.5%;
+    bottom: 0;
+    z-index: 3;
+}
+
+/* --------- COUNTER SLUT --------- */
+
+/* --------- BARTENDERS -------- */
+
+#bartenders div {
+    z-index: 2;
+    transition: left 1s ease;
+    pointer-events: none;
+}
+
+#bartenders div:nth-child(1) {
+    position: absolute;
+    background-image: url(images/scene/peter.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 11%;
+    height: 59.5%;
+    left: 75%;
+    top: 30%;
+}
+
+#bartenders div:nth-child(2) {
+    position: absolute;
+    background-image: url(images/scene/jonas.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 11%;
+    height: 59.5%;
+    left: 83%;
+    top: 30%;
+}
+
+#bartenders div:nth-child(3) {
+    position: absolute;
+    background-image: url(images/scene/martin.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 11%;
+    height: 59.5%;
+    left: 90%;
+    top: 30%;
+}
+
+/* --------- BARTENDERS SLUT -------- */
+
+/* --------- TV --------- */
+
+#tv {
+    position: absolute;
+    background-image: url(images/scene/tv.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 23.8%;
+    height: 30.5%;
+    left: 75.5%;
+    top: 14.7%;
+    z-index: 1;
+}
+
+.in_queue {
+    font-size: 12px;
+    font-weight: 900;
+}
+
+.order {
+    padding-bottom: 10px;
+}
+
+
+#being_served , .order{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 10px;
+    margin: 0;
+    color: white;
+}
+#screen {
+    position: absolute;
+    background-color: rgb(41, 165, 223);
+    width: 95.6%;
+    height: 89.5%;
+    left: 2.2%;
+    top: 4.7%;
+    overflow: hidden;
+}
+
+#screen p {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    color: white;
+    /* font-size: 10px; */
+}
+
+#screen1, #screen2 {
+    position: absolute;
+    top: 0;
+    transition: left 1s linear;
+    width: 100%;
+    height: 100%;
+}
+#screen1{
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: rgb(41, 165, 223);
+    left: 0;
+}
+
+#screen2{
+    background-color: rgb(20, 94, 128);
+    z-index: 1;
+    left: 100%;
+}
+
+#screen2 h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: white;
+    text-align: center;
+    padding: 0;
+    margin: 5px 0 0 0;
+    font-size: 1.3vw;
+}
+
+.podium {
+    position: absolute;
+    background-image: url(images/scene/podium.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 60%;
+    height: 37%;
+    top: 60%;
+    left: 19%;
+    z-index: 10;
+}
+
+.in_queue {
+    line-height: 12px;
+}
+
+.first_place, .second_place, .third_place {
+    position: absolute;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 29.2%;
+    width: 12.5%;
+}
+
+.first_place {
+    top: 25%;
+    left: 42%;
+}
+
+.second_place {
+    top: 35%;
+    left: 63%;
+}
+
+.third_place {
+    top: 39.5%;
+    left: 22%;
+}
+
+/* --------- TV SLUT --------- */
+
+/* -------- TAPS -------- */
+#taps {
+    position: absolute;
+    width: 73%;
+    height: 41.5%;
+    left: 2%;
+    top: 15%;
+}
+
+#taps div {
+    position: absolute;
+    background-image: url(images/scene/tap.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 12%;
+    height: 81.5%;
+    z-index: 1;
+}
+
+#taps div:nth-child(1) {
+    left: 2%;
+    top: 8%;
+}
+
+#taps div:nth-child(2) {
+    left: 16.25%;
+    top: 8%;
+}
+
+#taps div:nth-child(3) {
+    left: 30.5%;
+    top: 8%;
+    cursor: pointer;
+}
+
+#taps div:nth-child(4) {
+    left: 44.50%;
+    top: 8%;
+}
+
+#taps div:nth-child(5) {
+    left: 58%;
+    top: 8%;
+}
+
+#taps div:nth-child(6) {
+    left: 71.5%;
+    top: 8%;
+}
+
+#taps div:nth-child(7) {
+    left: 85%;
+    top: 8%;
+}
+
+#taps div div:nth-child(1) {
+    background-image: none;
+    background-color: #e2b92c;
+    width: 93%;
+    height: 63.5%;
+    left: 3.3%;
+    top: 5%;
+    transition: transform 2s;
+    transform-origin: bottom;
+    transform: scaleY(1);
+}
+
+#taps div div:nth-child(2) {
+    background-image: none;
+    background-color: #e2b92c;
+    width: 5%;
+    height: 40%;
+    left: 48%;
+    top: 84%;
+    transition: transform 0.2s;
+    transform-origin: top;
+    transform: scaleY(0);
+}
+
+#taps div div:nth-child(3) {
+    background-image: none;
+    background-position: center;
+    width: 70%;
+    height: 57%;
+    left: 14%;
+    top: 7%;
+}
+
+/* -------- TAPS SLUT -------- */
+
+/* -------- SCENE SLUT -------- */
+
+/* --------- BEER STORAGE --------- */
+#kegs_left {
+    background-color: #e2b92c;
+}
+#kegs_left h2 {
+    text-align: center;
+    background-color: #e2b92c;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 10px;
+    margin: 0;
+    color: white;
+}
+#taps_storage{
+    background-color: rgb(124, 116, 103);
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-auto-rows: 1fr;
+    /* grid-gap: 30px; */
+    /* margin-top: 10px; */
+    height: 100%;
+    width: 100vw;
+}
+
+.storage_div {
+    height: 300px;
+    background-color: rgb(255, 255, 255);
+    background-repeat: repeat-x;
+    background-size: 400%;
+    background-position: 50% -35%;
+    font-size: 13px;
+    text-align: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-weight: 900;
+    margin: 20px;
+    border-radius: 60px 60px 60px 60px;
+}
+
+.label_div {
+    /* background-image: url(images/negative.png); */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #e2b92c;
+    height: 80px;
+    margin-bottom: 10px;
+    border-radius: 60px 60px 0 0px;
+    padding-bottom: 20px;
+    border: 2px solid white;
+}
+
+.label_div img {
+    width: 28%;
+    cursor: pointer;
+    margin-top: 10px;
+    
+}
+
+#taps_storage .storage_div:nth-child(3) .label_div img, #taps_storage .storage_div:nth-child(5) .label_div img {
+    width: 24%;
+}
+
+#taps_storage .storage_div:nth-child(9) .label_div img, #taps_storage .storage_div:nth-child(10) .label_div img {
+    width: 35%;
+}
+
+/* #taps_storage img {
+    width: 20%;
+    cursor: pointer;
+} */
+
+.kegs_storage {
+    background-color: rgb(4, 82, 1);
+    height: 141px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    padding: 10px 30px 5px 30px;
+    grid-gap: 2px;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 0 0 60px 60px;
+    border: 2px solid white;
+}
+
+.kegs_storage img {
+    width: 35px;
+}
+/* --------- BEER STORAGE SLUT --------- */
+
+/* ------ MODAL VINDUE -------- */
+
+#modal_window {
+    justify-content: center;
+    align-content: center;
+    position: fixed;
+    background-color: rgba(0, 0, 0, .8);
+    width: 100vw;
+    height: 100vh;
+    z-index: 100000;
+    display: none;
+    top: 0;
+    left: 0;
+}
+
+#beer_info {
+    position: relative;
+    top: 8%;
+    background-color: rgb(4, 82, 1);
+    color: white;
+    border-radius: 8px;
+    width: 50vw;
+    flex-direction: column;
+    justify-content: space-between;
+    /* padding: 15px; */
+    margin: auto;
+    height: 600px;
+    overflow-y: scroll;
+    border-radius: 30px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+#beer_alc, #beer_cat, #beer_desc, summary, #beer_appear, #beer_aroma, #beer_flavor, #beer_mouth, #beer_overall {
+    margin-bottom: 20px;
+}
+
+#close_button {
+    position: fixed;
+    right: 27%;
+    margin-top: 5px;
+    cursor: pointer;
+    z-index: 10000;
+    font-size: 20px;
+    font-weight: 900;
+    color: black;
+}
+
+#close_button:hover {
+    color: white;
+}
+
+
+#beer_label {
+    display: flex;
+    align-items: center;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    background-color: #e2b92c;
+}
+
+#beer_label img {
+    width: 30%;
+    margin: auto;
+}
+
+#beer_name {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+    background-color: white;
+    padding: 10px;
+    color: black;
+}
+
+#beer_name h2 {
+    margin: auto;
+}
+
+#description {
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+#description b {
+    cursor: pointer;
+}
+
+#description b:hover {
+    color: rgb(204, 204, 204);
+}
+
+#beer_desc {
+    display: none;
+}
+
+#beer_alc, #beer_cat, #beer_desc, #description {
+    padding: 0 15px 0 15px;
+}
+
+#beer_overall {
+    height: auto;
+    overflow-y: scroll;
+    margin-bottom: 20px;
+}
+/* ------ MODAL VINDUE SLUT -------- */
+
+/* -------- MEDIA QUERIES ------- */
+
+@media screen and (max-width: 1415px) {
+  
+    body {
+        background-color: rgb(124, 116, 103);
+    }
+    #taps_storage{
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    margin: 0 auto;
+    max-width: 600px;
+    }
+    .in_queue {
+        font-size: 0.7vw;
+        line-height: 8px;
+    }
+    #being_served , .order{
+    font-size: 0.5vw;
+    }
+  }
+
+  /* --------- MEDIA QUERIES -------- */
