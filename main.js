@@ -502,10 +502,6 @@ function refillKegs(parm) {
             tapsStorage.children[i].children[1].innerHTML =
                 `${parm.storage[i].name} has ${parm.storage[i].amount} keg left`;
         }
-
-        // MÅ IKKE SLETTES, SKAL MULIGVIS BRUGES
-        // let kegsStorage = tapsStorage.children[i].children[1];
-
         let ii;
         let storageDiv = tapsStorage.children[i].children[2];
         // Opdaterer mængden af keg images
@@ -524,10 +520,6 @@ function refillKegs(parm) {
 // Funktion der åbner modalvindue med mere information om de forskellige øl
 function beerModal(evt) {
     let modalWindow = document.querySelector("#modal_window");
-
-    // MÅ IKKE SLETTES, SKAL MÅSKE BRUGES   
-    // let beerInfo = document.querySelector("#beer_info");
-
     let beerAlc = document.querySelector("#beer_alc");
     let beerName = document.querySelector("#beer_name h2");
     let beerCat = document.querySelector("#beer_cat");
