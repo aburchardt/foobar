@@ -253,7 +253,7 @@ function tvScreen(parm) {
             createItem =
                 `<div class="order">Customer ${customer.id} has ordered ${customer.order.length} beers: <br> <i>${customerOrder}</i></div>`;
                 // Ændrer igen her til at være grammatisk korrekt, i tilfælde af én enkelt genstand
-            if (customer.order.length = 1) {
+            if (customer.order.length == 1) {
                 createItem =
                     `<div class="order">Customer ${customer.id} has ordered ${customer.order.length} beer: <br> <i>${customerOrder}</i></div>`;
             }
