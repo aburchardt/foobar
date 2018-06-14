@@ -138,7 +138,7 @@ function getTime(parm) {
 // --------- BARTENDERS ---------- //
 
 // Funktion der bestemmer hvor bartenderne står, ifht. hvilken øl de serverer, ifht. deres left-value
-// Hvis bartenderne står ved deres position, hvor de ikke serverer, har de en opacity, så det er nemmere at
+// Hvis bartenderne ikke står ved en beertap, har de en opacity på 0.4, så det er nemmere at
 // se tv-skærmen bag dem, samt for at indikere at de ikke arbejder
 function bartenderPosition(parm) {
     const peter = document.querySelector("#bartenders").children[0]
@@ -146,71 +146,36 @@ function bartenderPosition(parm) {
     const martin = document.querySelector("#bartenders").children[2]
     let i;
     for (i = 0; parm.bartenders.length > i; i++) {
-        // PETER
-        if (parm.bartenders[i].name == "Peter") {
-            peter.style.opacity = "1";
-            if (parm.bartenders[i].usingTap == 0) {
-                peter.style.left = "6.4%"
-            } else if (parm.bartenders[i].usingTap == 1) {
-                peter.style.left = "16.8%"
-            } else if (parm.bartenders[i].usingTap == 2) {
-                peter.style.left = "27.2%"
-            } else if (parm.bartenders[i].usingTap == 3) {
-                peter.style.left = "37.3%"
-            } else if (parm.bartenders[i].usingTap == 4) {
-                peter.style.left = "47.3%"
-            } else if (parm.bartenders[i].usingTap == 5) {
-                peter.style.left = "57%"
-            } else if (parm.bartenders[i].usingTap == 6) {
-                peter.style.left = "67%"
-            } else {
+        // for hvert loop der kører er det den næste bartender
+        // da "i" starter på 0 incrementer med 1 hvert loop vil "children[i]" se sådan ud for de respektive loops
+        // første loop: children[0] // Peter
+        // andet loop: children[1] // Jonas
+        // tredje loop: children[2] // Martin
+        let bartender = document.querySelector("#bartenders").children[i]
+        bartender.style.opacity = "1";
+        if (parm.bartenders[i].usingTap == 0) {
+            bartender.style.left = "6.4%"
+        } else if (parm.bartenders[i].usingTap == 1) {
+            bartender.style.left = "16.8%"
+        } else if (parm.bartenders[i].usingTap == 2) {
+            bartender.style.left = "27.2%"
+        } else if (parm.bartenders[i].usingTap == 3) {
+            bartender.style.left = "37.3%"
+        } else if (parm.bartenders[i].usingTap == 4) {
+            bartender.style.left = "47.3%"
+        } else if (parm.bartenders[i].usingTap == 5) {
+            bartender.style.left = "57%"
+        } else if (parm.bartenders[i].usingTap == 6) {
+            bartender.style.left = "67%"
+        } else {
+            if (parm.bartenders[i].name == "Peter") {
                 peter.style.left = "75%"
-                peter.style.opacity = "0.4";
-            }
-        }
-        // JONAS 
-        if (parm.bartenders[i].name == "Jonas") {
-            jonas.style.opacity = "1";
-            if (parm.bartenders[i].usingTap == 0) {
-                jonas.style.left = "6.4%"
-            } else if (parm.bartenders[i].usingTap == 1) {
-                jonas.style.left = "16.8%"
-            } else if (parm.bartenders[i].usingTap == 2) {
-                jonas.style.left = "27.2%"
-            } else if (parm.bartenders[i].usingTap == 3) {
-                jonas.style.left = "37.3%"
-            } else if (parm.bartenders[i].usingTap == 4) {
-                jonas.style.left = "47.3%"
-            } else if (parm.bartenders[i].usingTap == 5) {
-                jonas.style.left = "57%"
-            } else if (parm.bartenders[i].usingTap == 6) {
-                jonas.style.left = "67%"
-            } else {
+            } else if (parm.bartenders[i].name == "Jonas") {
                 jonas.style.left = "83%";
-                jonas.style.opacity = "0.4";
-            }
-        }
-        // MARTIN
-        if (parm.bartenders[i].name == "Martin") {
-            martin.style.opacity = "1";
-            if (parm.bartenders[i].usingTap == 0) {
-                martin.style.left = "6.4%"
-            } else if (parm.bartenders[i].usingTap == 1) {
-                martin.style.left = "16.8%"
-            } else if (parm.bartenders[i].usingTap == 2) {
-                martin.style.left = "27.2%"
-            } else if (parm.bartenders[i].usingTap == 3) {
-                martin.style.left = "37.3%"
-            } else if (parm.bartenders[i].usingTap == 4) {
-                martin.style.left = "47.3%"
-            } else if (parm.bartenders[i].usingTap == 5) {
-                martin.style.left = "57%"
-            } else if (parm.bartenders[i].usingTap == 6) {
-                martin.style.left = "67%"
             } else {
                 martin.style.left = "90%"
-                martin.style.opacity = "0.4";
             }
+            bartender.style.opacity = "0.4";
         }
     }
 }
@@ -226,20 +191,20 @@ function bartenderReplaceKeg(parm) {
         if (parm.bartenders[0].statusDetail == "replaceKeg") {
             peter.style.backgroundImage = "url('images/scene/peter_keg.png')"
         } else {
-            peter.style.backgroundImage = "url('images/scene/peter.png')"
+            peter.style.backgroundImage = "url('images/scene/Peter.png')"
         }
         // JONAS
         if (parm.bartenders[1].statusDetail == "replaceKeg") {
             jonas.style.backgroundImage = "url('images/scene/jonas_keg.png')"
 
         } else {
-            jonas.style.backgroundImage = "url('images/scene/jonas.png')"
+            jonas.style.backgroundImage = "url('images/scene/Jonas.png')"
         }
         // MARTIN
         if (parm.bartenders[2].statusDetail == "replaceKeg") {
             martin.style.backgroundImage = "url('images/scene/martin_keg.png')"
         } else {
-            martin.style.backgroundImage = "url('images/scene/martin.png')"
+            martin.style.backgroundImage = "url('images/scene/Martin.png')"
         }
     }
 }
