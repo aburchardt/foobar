@@ -191,20 +191,20 @@ function bartenderReplaceKeg(parm) {
         if (parm.bartenders[0].statusDetail == "replaceKeg") {
             peter.style.backgroundImage = "url('images/scene/peter_keg.png')"
         } else {
-            peter.style.backgroundImage = "url('images/scene/Peter.png')"
+            peter.style.backgroundImage = "url('images/scene/peter.png')"
         }
         // JONAS
         if (parm.bartenders[1].statusDetail == "replaceKeg") {
             jonas.style.backgroundImage = "url('images/scene/jonas_keg.png')"
 
         } else {
-            jonas.style.backgroundImage = "url('images/scene/Jonas.png')"
+            jonas.style.backgroundImage = "url('images/scene/jonas.png')"
         }
         // MARTIN
         if (parm.bartenders[2].statusDetail == "replaceKeg") {
             martin.style.backgroundImage = "url('images/scene/martin_keg.png')"
         } else {
-            martin.style.backgroundImage = "url('images/scene/Martin.png')"
+            martin.style.backgroundImage = "url('images/scene/martin.png')"
         }
     }
 }
